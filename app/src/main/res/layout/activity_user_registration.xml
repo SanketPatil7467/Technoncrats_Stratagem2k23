@@ -19,7 +19,7 @@
 
         <LinearLayout
             android:layout_width="334dp"
-            android:layout_height="363dp"
+            android:layout_height="513dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/custom_edittext"
             android:orientation="vertical"
@@ -41,7 +41,7 @@
                 android:id="@+id/user_name"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/custom_edittext"
                 android:drawableLeft="@drawable/baseline_person_24"
                 android:drawablePadding="8dp"
@@ -53,7 +53,7 @@
                 android:id="@+id/user_email"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/custom_edittext"
                 android:drawableLeft="@drawable/baseline_email_24"
                 android:drawablePadding="8dp"
@@ -62,15 +62,88 @@
                 android:padding="8dp"
                 android:textColor="@color/black" />
 
+            <EditText
+                android:id="@+id/birth_date"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableLeft="@drawable/baseline_calendar_today_24"
+                android:drawablePadding="8dp"
+                android:hint="Birth Date"
+                android:inputType="date"
+                android:padding="8dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/contact_number"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableLeft="@drawable/baseline_phone_24"
+                android:drawablePadding="8dp"
+                android:hint="Contact Number"
+                android:inputType="phone"
+                android:padding="8dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_edittext"
+                android:drawablePadding="8dp"
+                android:text="Select Gender"
+                android:padding="8dp"
+                android:textColor="@color/black" />
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:text="Male  "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:text="Female  "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <RadioButton
+                    android:id="@+id/other"
+                    android:text="Other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RadioGroup>
             <Button
-                android:id="@+id/doc_login_button1"
+                android:id="@+id/upload_image"
+                android:layout_width="155dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/purple_500"
+                android:text="Upload Image"
+                android:textSize="14sp"
+                app:cornerRadius="20dp" />
+
+            <Button
+                android:id="@+id/submit"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_marginTop="30dp"
                 android:backgroundTint="@color/purple_500"
-                android:text="Login"
+                android:text="Submit"
                 android:textSize="18sp"
                 app:cornerRadius="20dp" />
+
 
 
         </LinearLayout>
