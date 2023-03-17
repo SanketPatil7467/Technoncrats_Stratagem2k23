@@ -19,7 +19,7 @@
 
         <LinearLayout
             android:layout_width="334dp"
-            android:layout_height="513dp"
+            android:layout_height="547dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/custom_edittext"
             android:orientation="vertical"
@@ -133,16 +133,27 @@
                 android:backgroundTint="@color/purple_500"
                 android:text="Upload Image"
                 android:textSize="14sp"
-                app:cornerRadius="7dp" />
+                app:cornerRadius="17dp" />
 
             <Button
                 android:id="@+id/submit"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:backgroundTint="@color/purple_500"
                 android:text="Submit"
                 android:textSize="18sp"
                 app:cornerRadius="20dp" />
+
+            <TextView
+                android:id="@+id/my_portal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_gravity="center"
+                android:text="Check my Counter Number."
+                android:textAlignment="center"
+                android:textColor="@color/purple_500"
+                android:textSize="18sp" />
 
 
 

@@ -12,6 +12,7 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -36,6 +37,7 @@ public class UserRegistration extends AppCompatActivity {
     StorageReference storageReference;
     DatabaseReference databaseReference;
     FirebaseDatabase db;
+    TextView my_portal;
 
     Uri imageUri;
     ProgressDialog progressDialog;
@@ -51,10 +53,18 @@ public class UserRegistration extends AppCompatActivity {
         upload_image = findViewById(R.id.upload_image);
         user_age = findViewById(R.id.user_age);
         submit = findViewById(R.id.submit);
+        my_portal = findViewById(R.id.my_portal);
 
         storageReference = FirebaseStorage.getInstance().getReference();
         databaseReference = FirebaseDatabase.getInstance("https://faceheal-default-rtdb.firebaseio.com/").getReference("Images");
 
+
+        my_portal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(UserRegistration.this,UserPortal.class));
+            }
+        });
         upload_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
