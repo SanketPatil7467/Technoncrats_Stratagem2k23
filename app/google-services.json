@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "683999414515",
+    "project_id": "faceheal",
+    "storage_bucket": "faceheal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:683999414515:android:5c140f0f2ba61a59310f86",
+        "android_client_info": {
+          "package_name": "com.example.faceheal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "683999414515-vimgajqpjcm7tmhgbq22v2i8j2esr6nj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBK7WV04aruqJI-TzvYRtpEFgifr3vHmpU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "683999414515-vimgajqpjcm7tmhgbq22v2i8j2esr6nj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -70,7 +70,7 @@
                 android:background="@drawable/custom_edittext"
                 android:drawableLeft="@drawable/baseline_calendar_today_24"
                 android:drawablePadding="8dp"
-                android:hint="Birth Date"
+                android:hint="Age"
                 android:inputType="date"
                 android:padding="8dp"
                 android:textColor="@color/black" />
@@ -127,13 +127,13 @@
             <Button
                 android:id="@+id/upload_image"
                 android:layout_width="155dp"
-                android:layout_height="45dp"
+                android:layout_height="47dp"
                 android:layout_marginLeft="60dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:backgroundTint="@color/purple_500"
                 android:text="Upload Image"
                 android:textSize="14sp"
-                app:cornerRadius="20dp" />
+                app:cornerRadius="7dp" />
 
             <Button
                 android:id="@+id/submit"
