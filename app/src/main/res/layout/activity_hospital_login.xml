@@ -47,7 +47,7 @@
                 android:drawableLeft="@drawable/baseline_phone_24"
                 android:drawablePadding="8dp"
                 android:hint="Enter Contact Number"
-                android:inputType="phone"
+                android:inputType="text"
                 android:padding="8dp"
                 android:textColor="@color/black" />
 
