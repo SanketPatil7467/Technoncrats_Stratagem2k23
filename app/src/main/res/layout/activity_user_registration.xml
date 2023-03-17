@@ -63,7 +63,7 @@
                 android:textColor="@color/black" />
 
             <EditText
-                android:id="@+id/birth_date"
+                android:id="@+id/user_age"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="10dp"

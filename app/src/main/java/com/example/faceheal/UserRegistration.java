@@ -29,11 +29,13 @@ public class UserRegistration extends AppCompatActivity {
     EditText user_email;
     EditText contact_number;
     EditText user_name;
+    EditText user_age;
     private final int GALLERY_REQ_CODE = 1000;
     private Button upload_image;
     private Button submit;
     StorageReference storageReference;
     DatabaseReference databaseReference;
+    FirebaseDatabase db;
 
     Uri imageUri;
     ProgressDialog progressDialog;
@@ -47,6 +49,7 @@ public class UserRegistration extends AppCompatActivity {
         user_name = findViewById(R.id.user_name);
         contact_number = findViewById(R.id.contact_number);
         upload_image = findViewById(R.id.upload_image);
+        user_age = findViewById(R.id.user_age);
         submit = findViewById(R.id.submit);
 
         storageReference = FirebaseStorage.getInstance().getReference();
@@ -64,6 +67,27 @@ public class UserRegistration extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                String name = user_name.getText().toString();
+                String email = user_email.getText().toString();
+                String phone = contact_number.getText().toString();
+                String age = user_age.getText().toString();
+
+                db = FirebaseDatabase.getInstance("https://faceheal-default-rtdb.firebaseio.com/");
+                databaseReference = db.getReference("Users");
+                databaseReference.child(phone).child("Name").setValue(name);
+                databaseReference.child(phone).child("Email").setValue(email);
+                databaseReference.child(phone).child("Phone").setValue(phone);
+                databaseReference.child(phone).child("Age").setValue(age).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(UserRegistration.this, "Registered Successfully..!", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                Intent intent = new Intent(UserRegistration.this,MainActivity.class);
+                startActivity(intent);
+                finish();
+
 
             }
         });
@@ -98,6 +122,7 @@ public class UserRegistration extends AppCompatActivity {
         reference.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                progressDialog.dismiss();
                 Toast.makeText(UserRegistration.this, "Image Uploaded", Toast.LENGTH_SHORT).show();
 
             }
